@@ -5,6 +5,8 @@ conn = sqlite3.connect('gongyi.db')
 cursor = conn.cursor()
 
 print('hello world')
+print('hello world')
+
 # 关闭数据库
 cursor.close()
 conn.commit()
