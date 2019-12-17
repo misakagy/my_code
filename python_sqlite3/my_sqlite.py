@@ -64,7 +64,7 @@ if __name__ == '__main__':
 
     while(True):
         user_input = input('输入命令执行相关操作：q-查询30天数据，w-查询7天数据，e-录入模式')
-        
+        print('test')
         if user_input == 'q':
             print(user_input)
             pass
@@ -73,7 +73,7 @@ if __name__ == '__main__':
         elif user_input == 'e':
             pass
 
-    
+     
 
 
 
