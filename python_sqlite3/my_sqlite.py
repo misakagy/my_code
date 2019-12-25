@@ -65,10 +65,12 @@ def summary_print(summary_list):
         else:
             temp[work[1]] = temp[work[1]] + ' ' + work[2]
     for key in temp:
-        output = '[%s]\n' % (key)
-        for i in temp[key]:
-            
+        output = '【%s】' % (key)
         print(output)
+        num = 0
+        for i in temp[key].split():
+            num += 1
+            print("%d. %s" % (num, i))
 
 def collect_input():
     data = []
@@ -92,9 +94,9 @@ if __name__ == '__main__':
     while(True):
         user_input = input('输入命令执行相关操作：q-查询30天数据，w-查询7天数据，e-录入模式，z-退出\n')
         if user_input == 'q':
-            summary_print(my_work.select_day_data(7))                
+            summary_print(my_work.select_day_data(30))                
         elif user_input == 'w':
-            summary_print(my_work.select_day_data(30))       
+            summary_print(my_work.select_day_data(7))       
         elif user_input == 'e':
             ret = collect_input()
             for one in ret:
